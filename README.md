@@ -24,3 +24,15 @@ Bản này dùng localStorage. Chưa có đăng nhập hoặc đồng bộ tự 
 
 ## Nội dung
 387 câu, đáp án giữ theo CSV. Đáp án nhiễu và diễn giải chưa được kiểm chứng độc lập với giáo trình. Có thể chỉnh trên web và xuất CSV.
+
+
+## Học khái niệm — cập nhật mới
+Thêm concepts.js và khai-niem-mau.csv. Vào Học khái niệm → Nhập CSV khái niệm. Đây là file riêng, không dùng file trắc nghiệm 13 cột.
+
+Cột bắt buộc: Thuật ngữ, Định nghĩa. Cột tùy chọn: Nhóm, Từ khóa, Tên khác, Ví dụ, Phân biệt, Giải thích. Từ khóa phải có nguyên văn trong định nghĩa; nhiều từ khóa hoặc tên tương đương cách nhau bằng |.
+
+Có các chế độ: định nghĩa → điền tên, điền từ khóa trong định nghĩa, phối hợp và phân biệt thuật ngữ. Có gợi ý 2 mức, đánh dấu, ôn sai và ôn đến hạn. Điền từ tăng số cụm khuyết theo tiến độ.
+
+Để cập nhật GitHub: upload toàn bộ file trong thư mục zenith lên cùng vị trí với index.html; chọn Commit changes. Các file cũ được thay bằng bản mới, có thêm concepts.js. Khi URL và bộ nhớ trình duyệt không đổi, bản cập nhật vẫn giữ tiến độ. Nên xuất JSON trước khi cập nhật.
+
+Tiến độ khái niệm được lưu chung trong bản sao JSON; không tự đồng bộ qua GitHub.
