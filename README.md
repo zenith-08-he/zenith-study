@@ -1,38 +1,18 @@
-# Zenith — Góc học tập lofi
+# Zenith — Lofi, thi thử tùy chọn
 
-## Mở web
-Giải nén, giữ tất cả file cùng thư mục, mở index.html bằng Chrome hoặc Edge. Không cần Internet hoặc API.
+Giải nén và mở index.html trên máy tính, hoặc upload toàn bộ file trong thư mục zenith vào repository GitHub Pages đang dùng. Giữ index.html ở thư mục gốc. Không cần cài thêm thư viện.
 
-## Nhạc và giao diện
-Bấm ▶ ở thanh nhạc để phát nhạc lofi tổng hợp trên máy. Bấm Nhạc & âm thanh để chỉnh âm lượng, chọn nhạc từ máy hoặc bật âm thanh đúng/sai. Nhạc không tự phát khi mở trang. File nhạc riêng cần chọn lại mỗi lần mở trang; nhạc riêng không được tải lên máy chủ.
-Nút mặt trăng/mặt trời đổi sáng–tối. Nút Tập trung ẩn phần phụ; bấm lại hoặc nhấn Escape để thoát.
+## Bản cập nhật
+- Thi thử tùy chọn: chọn số câu, số phút, điểm/câu hoặc tổng điểm. Các câu có cùng trọng số; hai ô điểm tự tính theo nhau. Chỉ dùng câu đã duyệt và đúng bài/phạm vi đã chọn. Nếu không đủ câu, web báo số câu tối đa.
+- Có thể đổi đáp án trước khi nộp, đi trước/sau hoặc chọn trực tiếp số câu. Câu đã trả lời được tô màu. Hết giờ tự nộp, câu bỏ trống tính 0 điểm. Chỉ hiện đáp án đúng sau nộp bài.
+- Nút trước/sau và phím ← → cho trắc nghiệm, flashcard, điền từ, học phối hợp và học khái niệm. Các phím mũi tên không chuyển câu khi đang gõ vào ô nhập liệu; bấm ra ngoài ô để dùng. Phím 1–4 chọn/sửa đáp án; Space lật flashcard.
+- Flashcard có đồng hồ thời gian từ lúc bắt đầu lượt và từ lúc mở thẻ hiện tại. Đồng hồ lượt tính cả thời gian đóng tab hoặc nghỉ; đồng hồ thẻ đặt lại khi mở thẻ. Đây là đồng hồ đếm lên, không giới hạn thời gian học.
+- Chuyển câu khi chưa trả lời không tính là sai trong luyện tập; kết quả lượt học chỉ tính các câu đã tự đánh giá hoặc kiểm tra. Thi thử luôn chấm đủ số câu trong đề.
+- Quay lại câu đã chấm để xem lại không tăng tiến độ. Nội dung nháp và chỗ khuyết được giữ khi chuyển câu trong lượt.
 
-## Các file
-- index.html: bố cục.
-- style.css: toàn bộ CSS; phần cuối là giao diện lofi và chế độ tối.
-- room.svg: hình góc học tập.
-- lofi.js: nhạc tổng hợp, chọn file nhạc, âm thanh đúng/sai, sáng/tối và tập trung.
-- app.js: tính năng học, CSV và tiến độ.
-- data.js: ngân hàng câu hỏi và đáp án nguồn.
-- enrich.js: đáp án nhiễu và diễn giải học tập bổ sung.
+## Dữ liệu và cập nhật
+Trước khi thay file, dùng Tiến độ → Xuất toàn bộ bản sao JSON để dự phòng. Upload đè tất cả file trong thư mục zenith, rồi Ctrl+F5 trên web. Giữ nguyên địa chỉ web và trình duyệt để tiếp tục dùng dữ liệu đang lưu. Nên kết thúc lượt cũ trước khi cập nhật.
 
-## Đưa lên GitHub
-Upload các file đã giải nén lên repository của bạn (không upload ZIP để chạy web). Có thể triển khai như website tĩnh, không có bước build.
+Giữ đầy đủ 387 câu có sẵn, nhập/xuất CSV trắc nghiệm, CSV khái niệm riêng, sao lưu JSON, nhạc lofi và giao diện sáng/tối. Dữ liệu lưu riêng trong trình duyệt, chưa tự đồng bộ giữa thiết bị.
 
-## Tiến độ
-Bản này dùng localStorage. Chưa có đăng nhập hoặc đồng bộ tự động giữa các thiết bị. Trên web đang học, vào Tiến độ → Xuất toàn bộ bản sao JSON. Tại địa chỉ web mới, dùng Khôi phục bản sao để chuyển dữ liệu. Dữ liệu học không nằm trong mã nguồn.
-
-## Nội dung
-387 câu, đáp án giữ theo CSV. Đáp án nhiễu và diễn giải chưa được kiểm chứng độc lập với giáo trình. Có thể chỉnh trên web và xuất CSV.
-
-
-## Học khái niệm — cập nhật mới
-Thêm concepts.js và khai-niem-mau.csv. Vào Học khái niệm → Nhập CSV khái niệm. Đây là file riêng, không dùng file trắc nghiệm 13 cột.
-
-Cột bắt buộc: Thuật ngữ, Định nghĩa. Cột tùy chọn: Nhóm, Từ khóa, Tên khác, Ví dụ, Phân biệt, Giải thích. Từ khóa phải có nguyên văn trong định nghĩa; nhiều từ khóa hoặc tên tương đương cách nhau bằng |.
-
-Có các chế độ: định nghĩa → điền tên, điền từ khóa trong định nghĩa, phối hợp và phân biệt thuật ngữ. Có gợi ý 2 mức, đánh dấu, ôn sai và ôn đến hạn. Điền từ tăng số cụm khuyết theo tiến độ.
-
-Để cập nhật GitHub: upload toàn bộ file trong thư mục zenith lên cùng vị trí với index.html; chọn Commit changes. Các file cũ được thay bằng bản mới, có thêm concepts.js. Khi URL và bộ nhớ trình duyệt không đổi, bản cập nhật vẫn giữ tiến độ. Nên xuất JSON trước khi cập nhật.
-
-Tiến độ khái niệm được lưu chung trong bản sao JSON; không tự đồng bộ qua GitHub.
+Bản ZIP này không tự triển khai hoặc cập nhật web đã đăng.
